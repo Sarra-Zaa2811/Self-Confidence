@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Confidence - Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Lien vers Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            background: url('images/background.jpg') no-repeat center center/cover;
+            color: white;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        footer {
+            background-color: #343a40;
+        }
+        .card-img-top {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .card {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Self-Confidence</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <!-- Panier -->
+                    <li class="nav-item">
+                        <a class="nav-link cart-icon" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Héroïque -->
+    <header class="hero">
+        <div>
+            <h1>Bienvenue chez Self-Confidence</h1>
+            <p>Découvrez des soins pour une peau éclatante de santé.</p>
+            <a href="products.html" class="btn btn-primary btn-lg mt-3">Voir nos produits</a>
+        </div>
+    </header>
+
+    <!-- Présentation -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Pourquoi choisir Self-Confidence ?</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="bi bi-gem fs-1 text-primary"></i>
+                <h5 class="mt-3">Qualité supérieure</h5>
+                <p>Nous garantissons des produits 100% naturels et efficaces.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-heart fs-1 text-danger"></i>
+                <h5 class="mt-3">Soin personnalisé</h5>
+                <p>Des solutions adaptées à chaque type de peau.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-tree fs-1 text-success"></i>
+                <h5 class="mt-3">Respect de l’environnement</h5>
+                <p>Engagés pour des produits écologiques et durables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produits phares -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nos produits phares</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/creme.jpg" class="card-img-top" alt="Produit 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Crème Hydratante</h5>
+                            <p class="card-text">Hydrate intensément pour une peau douce et souple.</p>
+                            <a href="#" class="btn btn-outline-primary">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/serum.jpg" class="card-img-top" alt="Produit 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sérum Éclat</h5>
+                            <p class="card-text">Illumine et améliore la texture de votre peau.</p>
+                            <a href="#" class="btn btn-outline-primary">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/masque.png" class="card-img-top" alt="Produit 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Masque Purifiant</h5>
+                            <p class="card-text">Élimine les impuretés et resserre les pores.</p>
+                            <a href="#" class="btn btn-outline-primary">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-white text-center py-4">
+        <p>&copy; 2024 Self-Confidence. Tous droits réservés.</p>
+    </footer>
+    
+
+    
+</body>
+</html>

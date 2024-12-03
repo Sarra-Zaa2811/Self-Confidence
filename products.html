@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Self-Confidence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="products.js"></script>
+
+    <style>
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .product-description {
+            height: 70px;
+            overflow: hidden;
+        }
+        .product-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Self-Confidence</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h2 class="text-center">Nos Produits</h2>
+
+        <!--Barre de recherche -->
+
+        <div class="mb-4">
+            <input type="text" id="search-bar" class="form-control" placeholder="Rechercher un produit..." onkeyup="filterProducts()">
+        </div>
+
+        <div class="row" id="product-list">
+            <!-- Exemple de produit 1 -->
+            <div class="col-md-4 product">
+                <img src="images/antiage.jpg" alt="Crème Anti-Âge" class="img-fluid product-img">
+                <h5 class="mt-2">Crème Anti-Âge</h5>
+                <p class="product-description">Cette crème hydratante offre une protection contre les signes de l'âge et aide à réduire l'apparence des rides.</p>
+                <p class="product-price">45 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <!-- Exemple de produit 2 -->
+            <div class="col-md-4 product">
+                <img src="images/hyaloronique.jpg" alt="Sérum Hyaluronique" class="img-fluid product-img">
+                <h5 class="mt-2">Sérum Hyaluronique</h5>
+                <p class="product-description">Le sérum hyaluronique hydrate en profondeur et procure une peau lisse et éclatante.</p>
+                <p class="product-price">60 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <!-- Exemple de produit 3 -->
+            <div class="col-md-4 product">
+                <img src="images/creme.jpg" alt="Crème Hydratante" class="img-fluid product-img">
+                <h5 class="mt-2">Crème Hydratante</h5>
+                <p class="product-description">Une crème légère qui pénètre rapidement pour une hydratation longue durée et une peau douce.</p>
+                <p class="product-price">38 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <!-- Exemple de produit 4 -->
+            <div class="col-md-4 product">
+                <img src="images/revitalissant.jpg" alt="Masque Revitalisant" class="img-fluid product-img">
+                <h5 class="mt-2">Masque Revitalisant</h5>
+                <p class="product-description">Un masque nourrissant pour redonner éclat et vitalité à la peau.</p>
+                <p class="product-price">50 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <!-- Exemple de produit 5 -->
+            <div class="col-md-4 product">
+                <img src="images/vitaminc.jpg" alt="Sérum Vitamine C" class="img-fluid product-img">
+                <h5 class="mt-2">Sérum Vitamine C</h5>
+                <p class="product-description">Ce sérum éclat apporte une lumière instantanée à votre peau et combat les effets du vieillissement.</p>
+                <p class="product-price">55 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <!-- Exemple de produit 6 -->
+            <div class="col-md-4 product">
+                <img src="images/masque.png" alt="Crème Réparatrice" class="img-fluid product-img">
+                <h5 class="mt-2">Masque Purifiant</h5>
+                <p class="product-description">Répare la peau sèche et abîmée, idéale pour les peaux sensibles et irritées.</p>
+                <p class="product-price">42 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+
+            <!-- 6 autres produits cachés -->
+            <div class="col-md-4 product extra-products" style="display:none;">
+                <img src="images/regenerante.jpg" alt="Crème Régénérante" class="img-fluid product-img">
+                <h5 class="mt-2">Crème Régénérante</h5>
+                <p class="product-description">Stimule la régénération cellulaire et renforce la barrière cutanée.</p>
+                <p class="product-price">65 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <div class="col-md-4 product extra-products" style="display:none;">
+                <img src="images/antitache.jpg" alt="Sérum Anti-Taches" class="img-fluid product-img">
+                <h5 class="mt-2">Sérum Anti-Taches</h5>
+                <p class="product-description">Élimine les taches sombres et uniformise le teint pour une peau éclatante.</p>
+                <p class="product-price">58 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <div class="col-md-4 product extra-products" style="display:none;">
+                <img src="images/contour.jpg" alt="Crème Contour des Yeux" class="img-fluid product-img">
+                <h5 class="mt-2">Crème Contour des Yeux</h5>
+                <p class="product-description">Réduit les cernes et les poches autour des yeux pour un regard plus frais et reposé.</p>
+                <p class="product-price">48 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <div class="col-md-4 product extra-products" style="display:none;">
+                <img src="images/apaisante.jpg" alt="Crème Apaisante" class="img-fluid product-img">
+                <h5 class="mt-2">Crème Apaisante</h5>
+                <p class="product-description">Apaise la peau irritée tout en offrant une sensation de confort immédiat.</p>
+                <p class="product-price">52 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <div class="col-md-4 product extra-products" style="display:none;">
+                <img src="images/nourissant.jpg" alt="Sérum Nourrissant" class="img-fluid product-img">
+                <h5 class="mt-2">Sérum Nourrissant</h5>
+                <p class="product-description">Un sérum enrichi en nutriments essentiels pour une peau bien nourrie et éclatante.</p>
+                <p class="product-price">60 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+            <div class="col-md-4 product extra-products" style="display:none;">
+                <img src="images/serum.jpg" alt="Crème Exfoliante" class="img-fluid product-img">
+                <h5 class="mt-2">Sérum Eclate</h5>
+                <p class="product-description">Élimine les cellules mortes et laisse la peau douce et lisse.</p>
+                <p class="product-price">70 TND</p>
+                <button class="btn btn-primary">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button id="see-more-btn" class="btn btn-primary" onclick="toggleProducts()">Voir plus</button>
+        </div>
+    </main>
+
+   
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Self-Confidence. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
